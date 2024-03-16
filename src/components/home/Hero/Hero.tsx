@@ -1,3 +1,4 @@
+import { Button } from "app/components/shared/Button";
 import Image from "next/image";
 import React from "react";
 
@@ -25,15 +26,8 @@ export const Hero: React.FC = () => {
           Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odio quaerat aliquid provident iste, repellat cupiditate facilis. Molestias, totam animi ratione iure maiores similique reprehenderit deleniti eos nobis repudiandae quam recusandae?
         </p>
         <div className="flex flex-wrap">
-          <div className="w-full md:w-1/2 lg:w-1/4 px-4 mb-8">
-            <button className="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-3 px-6 rounded shadow">
-              SHOP NOW
-            </button>
-          </div>
-          <div className="w-full md:w-1/2 lg:w-1/4 px-4 mb-8">
-            <button className="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-3 px-6 rounded shadow">
-              GET IN TOUCH
-            </button>
+          <div className="w-full md:w-1/2 lg:w-1/4 px-2 mb-8">
+            <Button />
           </div>
         </div>
       </div>

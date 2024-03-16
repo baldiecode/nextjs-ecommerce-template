@@ -1,3 +1,4 @@
+import { Button } from 'app/components/shared/Button';
 import Image from 'next/image'
 import React from 'react'
 
@@ -46,14 +47,7 @@ export const MainBanner = () => {
                   </p>
                   <div className="flex flex-wrap">
                     <div className="w-full md:w-1/2 lg:w-1/4 px-4 mb-8">
-                     <button className="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-3 px-6 rounded shadow">
-                       SHOP NOW
-                     </button>
-                    </div>
-                    <div className="w-full md:w-1/2 lg:w-1/4 px-4 mb-8">
-                     <button className="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-3 px-6 rounded shadow">
-                       GET IN TOUCH
-                     </button>
+                     <Button />
                     </div>
                   </div>
                 </div>

@@ -7,16 +7,16 @@ export default function Header() {
             <nav className="ml-auto">
               <ul className="flex space-x-4">
               <li>
-                  <a href="/" className="hover:text-blue-300">Inicio</a>
+                  <a href="/" className="hover:text-blue-950">Inicio</a>
                 </li>
                 <li>
-                  <a href="/products" className="hover:text-blue-300">Productos</a>
+                  <a href="/products" className="hover:text-blue-950">Productos</a>
                 </li>
                 <li>
-                  <a href="/" className="hover:text-blue-300">Tienda</a>
+                  <a href="/" className="hover:text-blue-950">Tienda</a>
                 </li>
                 <li>
-                  <a href="/login" className="hover:text-blue-300">Iniciar Sesión</a>
+                  <a href="/login" className="hover:text-blue-950">Iniciar Sesión</a>
                 </li>
               </ul>
             </nav>
