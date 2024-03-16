@@ -1,27 +1,46 @@
+import Image from "next/image";
 import React from "react";
 
 export const Hero: React.FC = () => {
   return (
-    <section className="px-3 py-5 bg-neutral-100 lg:py-10">
-      <div className="grid lg:grid-cols-2 items-center justify-items-center gap-5">
-        <div className="order-2 lg:order-1 flex flex-col justify-center items-center">
-          <p className="text-4xl font-bold md:text-7xl text-orange-600">
-            25% OFF
-          </p>
-          <p className="text-4xl font-bold md:text-7xl">SUMMER SALE</p>
-          <p className="mt-2 text-sm md:text-lg">For limited time only!</p>
-          <button className="text-lg md:text-2xl bg-black text-white py-2 px-5 mt-10 hover:bg-zinc-800">
-            Shop Now
-          </button>
-        </div>
-        <div className="order-1 lg:order-2">
-          <img
-            className="h-80 w-80 object-cover lg:w-[500px] lg:h-[500px]"
-            src="https://images.unsplash.com/photo-1615397349754-cfa2066a298e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1887&q=80"
-            alt=""
-          />
+<section className="relative bg-gray-900 h-screen">
+ <div className="absolute inset-0">
+    <Image
+      src="/images/hero.jpg"
+      alt="Hero Image"
+      layout="fill"
+      objectFit="cover"
+      objectPosition="center"
+      quality={100}
+      priority
+    />
+ </div>
+ <div className="container mx-auto px-6 pt-12 pb-6 text-gray-800 relative z-10">
+    <div className="flex flex-wrap justify-end">
+      <div className="w-full lg:w-5/12 px-4">
+        <h1 className="text-4xl text-blue-950 md:text-6xl xl:text-7xl font-bold-700 leading-tight mb-12">
+          Welcome To Candy Shop
+        </h1>
+        <p className="text-xl text-blue-950 md:text-3xl lg:text-4xl mb-8">
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odio quaerat aliquid provident iste, repellat cupiditate facilis. Molestias, totam animi ratione iure maiores similique reprehenderit deleniti eos nobis repudiandae quam recusandae?
+        </p>
+        <div className="flex flex-wrap">
+          <div className="w-full md:w-1/2 lg:w-1/4 px-4 mb-8">
+            <button className="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-3 px-6 rounded shadow">
+              SHOP NOW
+            </button>
+          </div>
+          <div className="w-full md:w-1/2 lg:w-1/4 px-4 mb-8">
+            <button className="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-3 px-6 rounded shadow">
+              GET IN TOUCH
+            </button>
+          </div>
         </div>
       </div>
-    </section>
+    </div>
+ </div>
+</section>
+
+
   );
 };

@@ -1,0 +1,1 @@
+export { SecondBanner } from './SecondBanner';
