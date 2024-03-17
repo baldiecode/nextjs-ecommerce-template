@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Header() {
   return (
       <header className="bg-gray-100 text-gray-800 shadow-lg p-4 fixed top-0 w-full z-50">
@@ -7,13 +9,10 @@ export default function Header() {
             <nav className="ml-auto">
               <ul className="flex space-x-4">
               <li>
-                  <a href="/" className="hover:text-blue-950">Inicio</a>
+                  <Link href="/" className="hover:text-blue-950">Inicio</Link>
                 </li>
                 <li>
-                  <a href="/products" className="hover:text-blue-950">Productos</a>
-                </li>
-                <li>
-                  <a href="/" className="hover:text-blue-950">Tienda</a>
+                  <Link href="/store" className="hover:text-blue-950">Tienda</Link>
                 </li>
                 <li>
                   <a href="/login" className="hover:text-blue-950">Iniciar Sesión</a>
