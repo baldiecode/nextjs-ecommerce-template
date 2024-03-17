@@ -1,20 +1,10 @@
 import Image from "next/image";
 
-const getProducts = async () => {
-  const response = await fetch(`https://${process.env.SHOPIFY_HOSTNAME}/admin/api/2024-01/products.json`, {
-    headers: new Headers({
-      'x-shopify-access-token': process.env.SHOPIFY_API_KEY || ""
-    })
-  });
-  const data = await response.json();
-  return data;
-}
+
 
 
 export const MainProducts = async () => {
 
-  const products = await getProducts();
-  console.log(products);
  return (
     <section className="bg-gray-100 py-12">
       <div className="container mx-auto px-6">
