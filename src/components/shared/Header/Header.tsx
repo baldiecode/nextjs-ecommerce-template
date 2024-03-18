@@ -1,6 +1,11 @@
 import Link from "next/link";
+import { cookies } from "next-cookies";
 
 export default function Header() {
+
+  const cookiesStore = cookies()
+  const token = cookiesStore.get('accessToken')?.value
+
   return (
       <header className="bg-gray-100 text-gray-800 shadow-lg p-4 fixed top-0 w-full z-50">
         <div className="container mx-auto">
@@ -18,6 +23,7 @@ export default function Header() {
                   <a href="/login" className="hover:text-blue-950">Iniciar Sesión</a>
                 </li>
               </ul>
+              {token ? (<p>Hola!</p>) : (<Link href="/login">Login</Link>)}
             </nav>
           </div>
         </div>
