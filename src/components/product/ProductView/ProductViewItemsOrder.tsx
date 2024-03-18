@@ -1,6 +1,8 @@
 "use client";
+
 import { SyntheticEvent, useState } from "react";
-import { FaCartShopping } from 'react-icons/fa6';
+import { FaCartShopping } from "react-icons/fa6";
+// import { FaCartShopping } from 'react-icons/fa';
 
 interface ProductViewItemsOrderProps {
  maxQuantity: number,
@@ -26,19 +28,15 @@ export const ProductViewItemsOrder = ({ maxQuantity }: ProductViewItemsOrderProp
  }
 
  return (
-    <div className="flex flex-col items-center justify-center">
-      <div className="flex items-center justify-center mb-4">
-        <button onClick={handleSubtract} className="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded-l">
-          -
-        </button>
-        <p className="border-t border-b border-gray-300 font-semibold mx-2">{counter}</p>
-        <button onClick={handleAdd} className="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded-r">
-          +
-        </button>
+    <div className="grid grid-cols-2 gap-3 mt-8">
+      <div className="flex items-center gap-2 rounded-lg bg-gray-200">
+        <button onClick={handleSubtract} className="flex items-center justify-center h-8 w-8 text-xl font-bold text-gray-800 bg-transparent border-none cursor-pointer p-4">-</button>
+        <p className="m-0 text-xl font-normal">{counter}</p>
+        <button onClick={handleAdd} className="flex items-center justify-center h-8 w-8 text-xl font-bold text-gray-800 bg-transparent border-none cursor-pointer p-4">+</button>
       </div>
-      <form onSubmit={handleSubmit}>
-        <button type="submit" className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-          <FaCartShopping className="inline-block mr-2" />
+      <form onSubmit={handleSubmit} className="w-full">
+        <button type="submit" className="w-full h-12 flex items-center justify-center gap-2 bg-gradient-to-r from-purple-600 to-blue-600 text-white font-bold text-xl rounded-lg p-2 mt-4">
+          <FaCartShopping />
           <span>Add to cart</span>
         </button>
       </form>
