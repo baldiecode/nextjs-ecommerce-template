@@ -7,7 +7,7 @@ interface ProductCardInterface {
 
 export const ProductCard = ({ product }: ProductCardInterface) => {
   return (
-    <Link href={`/articulo/${product.handle}?id=${product.id}`}>
+    <Link href={`/product/${product.handle}?id=${product.id}`}>
     <div className="max-w-sm rounded overflow-hidden shadow-lg m-4">
       <Image
         src={product.image}
