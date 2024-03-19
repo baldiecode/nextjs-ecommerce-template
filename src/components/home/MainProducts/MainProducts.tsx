@@ -11,7 +11,6 @@ export const MainProducts = async () => {
         {products?.map((product: any) => {
           const imageSrc = product.images[0].src;
           return (
-            <Link href="/store">
               <article
                 key={product.id}
                 className="relative min-h-[500px] min-w-[600px] flex flex-col break-words bg-white bg-clip-border border-0 border-solid border-gray-200 rounded-lg max-w-md mx-auto "
@@ -30,7 +29,6 @@ export const MainProducts = async () => {
                   </p>
                 </div>
               </article>
-            </Link>
           );
         })}
       </div>

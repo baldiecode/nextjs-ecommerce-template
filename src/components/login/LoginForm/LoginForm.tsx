@@ -3,11 +3,16 @@ import { handleLogin } from "app/actions";
 import Link from "next/link";
 
 export const LoginForm = () => {
-  const handleSubmit = async (event) => {
+  
+  const handleSubmit = async (event: {
+    target: any;
+    preventDefault: () => void;
+  
+  }) => {
     const formData = new FormData(event.target);
     event.preventDefault();
     await handleLogin(formData);
-  };
+  }
 
   return (
     <div className="min-h-screen bg-gray-50 flex flex-col justify-center py-12 sm:px-6 lg:px-8 px-6">
