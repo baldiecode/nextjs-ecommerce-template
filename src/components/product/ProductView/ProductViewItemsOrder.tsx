@@ -22,24 +22,22 @@ export const ProductViewItemsOrder = ({
       price: product.price,
       quantity: counter,
       id: product.id,
+      image: product.image,
+      merchandiseId: product.gql_id
     });
-  };
-
-  const handleSubmit = (event: SyntheticEvent) => {
-    event.preventDefault();
-  };
+  }
 
   const handleSubtract = (event: SyntheticEvent) => {
     event.preventDefault();
     if (counter === 1) return;
     setCounter(counter - 1);
-  };
+  }
 
   const handleAdd = (event: SyntheticEvent) => {
     event.preventDefault();
     if (counter === maxQuantity) return;
     setCounter(counter + 1);
-  };
+  }
 
   return (
     <div className="grid grid-cols-2 gap-3 mt-8">
@@ -58,7 +56,7 @@ export const ProductViewItemsOrder = ({
           +
         </button>
       </div>
-      <form onSubmit={handleSubmit} className="w-full">
+      <form onSubmit={handleAddToCart} className="w-full">
         <button
           type="submit"
           className="w-full h-12 flex items-center justify-center gap-2 bg-gradient-to-r from-purple-600 to-blue-600 text-white font-bold text-xl rounded-lg p-2 mt-4"
