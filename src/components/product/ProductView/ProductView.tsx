@@ -27,7 +27,7 @@ export const ProductView = ({ product }: ProductViewProps) => {
         </p>
         <SanitizeHTML tag="p">{product.description}</SanitizeHTML>
         <span className="text-5xl font-bold">$ {product.price}</span>
-        <ProductViewItemsOrder maxQuantity={product.quantity} />
+        <ProductViewItemsOrder maxQuantity={product.quantity} product={product} />
       </section>
     </main>
   );
