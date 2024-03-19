@@ -6,11 +6,14 @@ export const NewAccountForm = () => {
   const [errors, setErrors] = useState<string[]>([]);
   const [loading, setLoading] = useState<boolean>(false);
 
-  const handleSubmit = async (event) => {
+  const handleSubmit = async (event: {
+    target: any;
+    preventDefault: () => void;
+  }) => {
     event.preventDefault();
     const formData = new FormData(event.target);
-    await handleCreateUser(formData);
-  };
+    await handleCreateUser(formData)
+  }
 
   return (
     <div className="min-h-screen bg-gray-50 flex flex-col justify-center py-12 sm:px-6 lg:px-8 mt-12">

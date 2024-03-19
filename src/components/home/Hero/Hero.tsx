@@ -9,10 +9,10 @@ export const Hero: React.FC = () => {
         <div className="flex flex-wrap justify-between mt-40 items-center">
           <div className="w-full lg:w-5/6 px-4 m-auto mb">
             <h1 className="text-4xl text-blue-950 md:text-6xl xl:text-7xl font-bold leading-tight mb-12">
-              Welcome To Candy Shop
+              Bienvenido a Candy Shop
             </h1>
             <p className="text-xl text-blue-950 md:text-3xl lg:text-4xl mb-8">
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+              Dulces, paletas, malvaviscos y más.
             </p>
             <div className="flex flex-wrap">
               <div className="w-full md:w-1/2 lg:w-1/4 px-2 mb-8">
