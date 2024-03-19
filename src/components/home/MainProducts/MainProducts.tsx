@@ -3,21 +3,29 @@ import Image from 'next/image'
 
 export const MainProducts = async () => {
  const products = await getMainProducts()
-
  return (
-    <section className="text-center text-6xl">
-      <h3>✨ New products released!</h3>
-      <div className="grid grid-cols-2 grid-rows-2 gap-4">
-        {products?.map((product) => {
-          const imageSrc = product.images[0].src;
-          return (
-            <article key={product.id} className="relative min-h-[400px]">
-              <Image src={imageSrc} alt={product.title} layout="fill" objectFit="cover" className="opacity-40" />
-              <p className="absolute top-0 right-6 z-10 text-4xl font-bold max-w-[300px] text-right">{product.title}</p>
-            </article>
-          )
-        })}
-      </div>
-    </section>
+  <section className="text-center text-6xl mt-40">
+     <h3 className='mb-20'>✨ Los mejores dulces los encontraras aquí !</h3>
+     <div className="grid grid-cols-2 gap-4 max-w-7xl mx-auto">
+       {products?.map((product) => {
+         const imageSrc = product.images[0].src;
+         return (
+           <article key={product.id} className="relative min-h-[500px] min-w-[600px] flex flex-col break-words bg-white bg-clip-border border-0 border-solid border-gray-200 rounded-lg max-w-md mx-auto ">
+             <div className="flex-grow relative">
+               <Image src={imageSrc} alt={product.title} layout="fill" objectFit="cover"/>
+             </div>
+             <div className="p-2 mb-6">
+               <p className="text-4xl font-bold max-w-[500px] text-left">{product.title}</p>
+             </div>
+           </article>
+         )
+       })}
+     </div>
+  </section>
  )
+ 
+ 
+ 
+ 
+ 
 }

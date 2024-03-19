@@ -5,7 +5,7 @@ export default async function Layout({ children }: { children: React.ReactNode }
  const collections = await getCollections()
 
  return (
-    <main className="flex flex-col items-center justify-center min-h-screen bg-gray-100 p-6">
+    <main className="flex flex-col items-center justify-center min-h-screen  p-6 mx-40">
       <h1 className="text-4xl font-bold text-center text-gray-800 mb-10 mt-20">Explorar</h1>
       <nav className="w-full max-w-md mx-auto">
         <ul className="flex flex-row justify-center gap-12">

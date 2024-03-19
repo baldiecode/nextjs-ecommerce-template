@@ -40,8 +40,8 @@ export const ProductViewItemsOrder = ({
   }
 
   return (
-    <div className="grid grid-cols-2 gap-3 mt-8">
-      <div className="flex items-center gap-2 rounded-lg bg-gray-200">
+    <div className="grid grid-cols-1 gap-3 mt-8">
+      <div className="flex items-start gap-2 bg-white outline outline-black justify-center w-40 h-10">
         <button
           onClick={handleSubtract}
           className="flex items-center justify-center h-8 w-8 text-xl font-bold text-gray-800 bg-transparent border-none cursor-pointer p-4"
@@ -59,10 +59,12 @@ export const ProductViewItemsOrder = ({
       <form onSubmit={handleAddToCart} className="w-full">
         <button
           type="submit"
-          className="w-full h-12 flex items-center justify-center gap-2 bg-gradient-to-r from-purple-600 to-blue-600 text-white font-bold text-xl rounded-lg p-2 mt-4"
+          className="w-80 h-12 flex items-start justify-center gap-2 outline outline-white text-white bg-black text-xl p-2 mt-4"
           onClick={handleAddToCart}
         >
-          <FaCartShopping />
+          <div className="mt-2">
+            <FaCartShopping />
+          </div>
           <span>Add to cart</span>
         </button>
       </form>
