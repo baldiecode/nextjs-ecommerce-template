@@ -72,12 +72,18 @@ export const LoginForm = () => {
               </span>
             </div>
             <div className="mt-6">
+            <label
+                htmlFor="password"
+                className="block text-sm font-medium leading-5 text-gray-700"
+              >
+                Aún no tienes cuenta?
+              </label>
               <span className="block w-full rounded-md shadow-sm">
                 <Link href="/signup">
                   <input
                     type="submit"
                     value="Register"
-                    className="w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-blak bg-white border-black hover:bg-gray-100 ease-in-out"
+                    className="w-full flex mt-1 justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-blak bg-white border-black hover:bg-gray-100 ease-in-out"
                   />
                 
                 </Link>

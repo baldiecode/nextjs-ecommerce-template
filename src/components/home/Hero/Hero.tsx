@@ -4,7 +4,7 @@ import React from "react";
 
 export const Hero: React.FC = () => {
   return (
-    <section className="relative h-screen mt-10 bg-amber-500">
+    <section className="relative h-screen mt-10 bg-gradient-to-r from-blue-400">
       <div className="absolute left-0 top-0 w-1/2 h-full">
         <div className="flex flex-wrap justify-between mt-40 items-center">
           <div className="w-full lg:w-5/6 px-4 m-auto mb">
@@ -22,10 +22,10 @@ export const Hero: React.FC = () => {
           </div>
         </div>
       </div>
-      <div className="absolute right-0 top-0 w-1/2 h-full rounded-full overflow-hidden">
+      <div className="absolute right-10 top-0 w-1/2 h-full rounded-full overflow-hidden">
         <Image
           className="hover:filter-none transition-filter duration-300"
-          src="/images/gums.jpg"
+          src="/images/hero-candy.jpg"
           alt="Imagen Derecha"
           layout="fill"
           objectFit="cover"
