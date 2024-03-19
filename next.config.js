@@ -1,8 +1,16 @@
+/** @type {import('next').NextConfig} */
+
 const path = require('path');
 
-module.exports = {
- webpack: (config) => {
-    config.resolve.alias['@app'] = path.resolve(__dirname, 'src/app');
-    return config;
- },
-};
+const nextConfig = {
+   images: {
+     remotePatterns: [
+       {
+         hostname: 'cdn.shopify.com',
+         protocol: 'https',
+       }
+     ]
+   }
+ }
+
+module.exports = nextConfig
