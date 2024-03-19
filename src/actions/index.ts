@@ -7,6 +7,7 @@ import { validateAccessToken } from "app/utils/auth/validateAccessToken"
 import { cookies } from "next/headers"
 import { redirect } from "next/navigation"
 
+
 export const handleCreateUser = async (formData: FormData) => {
   const formDataObject = Object.fromEntries(formData)
   delete formDataObject["password_confirmation"]
@@ -18,8 +19,15 @@ export const handleCreateUser = async (formData: FormData) => {
     }
   }
 
-  const { customerCreate } = await graphqlClient.request(createUserMutation, variables)
-  const { customerUserErrors, customer } = customerCreate
+  const { customerCreate }: {
+    customerCreate: {
+      customer: {
+        firstName: string
+        email: string
+      }
+    }
+  } = await graphqlClient.request(createUserMutation, variables)
+  const { customer } = customerCreate
   if (customer?.firstName) {
     await createAccessToken(formDataObject.email as string, formDataObject.password as string)
     redirect('/store')
