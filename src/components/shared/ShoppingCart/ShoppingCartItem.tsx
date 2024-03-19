@@ -12,7 +12,7 @@ export const ShoppingCartItem = ({ item }: ShoppingCartItemProps) => {
  const { removeCartItem } = useShoppingCart();
 
  return (
-    <div className="flex flex-row items-center space-x-4">
+    <div className="flex flex-row items-center space-x-4 gap-2">
       <Image src={item.image} alt={item.title} width={48} height={48} />
       <div className="grid grid-cols-2 gap-4 w-full items-center">
         <p className="font-bold text-xs text-left">{item?.title}</p>

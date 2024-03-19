@@ -41,7 +41,7 @@ export default function ShoppingCart() {
       </span>
       <FaShoppingCart className="w-8 h-8 text-gray-700" />
       {isOpen && (
-        <div className="absolute bg-primary border border-gray-300 rounded-lg right-0 max-w-[320px] min-w-[250px] p-4">
+        <div className="absolute bg-primary border border-gray-300 bg-gray-100 rounded-lg right-0 max-w-[320px] min-w-[250px] p-4">
           {cart.map((item) => (
             <ShoppingCartItem key={item.id} item={item} />
           ))}
